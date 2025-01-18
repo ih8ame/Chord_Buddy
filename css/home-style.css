@@ -1,0 +1,127 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #87CEEB;
+    color: #000000;
+}
+.logo img {
+    width: 190px;
+    height: auto;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+nav a {
+    color: #000000;
+    text-decoration: none;
+}
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+.italic-font {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 3rem;
+}
+button {
+    padding: 1rem 2rem;
+    background-color: #87CEEB;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 60px;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    border: none;
+}
+
+.lesson-container {
+    flex-direction: row-reverse;
+}
+.container.text-left .text {
+    order: -1;
+}
+.description-title {
+    margin: 0.5rem 0;
+}
+.lesson-title { 
+    text-align: right; 
+}
+img {
+    width: 35rem;
+    height: 20rem;
+    object-fit: cover;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50px;
+    
+}
+.description article {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    border: none;
+}
+.text { 
+    flex: 1; 
+    text-align: left; 
+}
+hr {
+    border: 2;
+    height: 2;
+    background: transparent;
+    margin: 0;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #87CEEB;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+.social-media {
+    display: flex;
+    gap: 10rem;
+    align-items: center
+}
+.social-media a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    font-weight: lighter;
+}
+.social-media img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: auto;
+    border: none;
+    align-items: center
+}
