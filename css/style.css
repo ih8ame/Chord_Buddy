@@ -29,6 +29,42 @@ body {
   padding-bottom: 90px;
 }
 
+.navbar-brand .logo {
+  max-width: 120px;  /* Maximum width for the logo (adjust as needed) */
+  height: auto;      /* Maintain aspect ratio */
+  max-height: 80px;  /* Adjust the maximum height of the logo */
+  width: auto;       /* Allow width to scale proportionally */
+  object-fit: contain; /* Ensures the logo fits within its box without distortion */
+  margin-right: 10px; /* Optional: Adds space between logo and text */
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-color: #f8f9fa; /* Light background for the sidebar */
+  padding: 15px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar .nav {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar .nav li {
+  margin-bottom: 10px;
+}
+
+.sidebar .nav li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.sidebar .nav li a:hover {
+  color: #007bff; /* Highlight color on hover */
+}
+
 .heading_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -684,8 +720,23 @@ a:focus {
   position: relative;
 }
 
+.service_section .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service_section .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service_section .heading_center {
+  margin-bottom: 30px;
+}
+
 .service_section .box {
   margin-top: 30px;
+  margin-bottom: 30px;
   text-align: center;
   -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
@@ -695,6 +746,8 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -705,11 +758,15 @@ a:focus {
 }
 
 .service_section .box .img-box {
+  flex-grow: 1;
   width: 65px;
   height: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -721,12 +778,15 @@ a:focus {
 .service_section .box .img-box img {
   max-height: 100%;
   max-width: 100%;
+  object-fit: cover;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
 .service_section .box .detail-box {
   margin-top: 15px;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 .service_section .box .detail-box h5 {
@@ -1114,7 +1174,7 @@ a:focus {
 .footer_section {
   position: relative;
   background-color: #87CEEB;
-  text-align: center;
+  padding: 5px 50px;
 }
 
 .footer_section p {
@@ -1126,4 +1186,56 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+.footer-left {
+  display: flex;
+  gap: 15px; /* Space between social media icons */
+}
+
+.footer-right {
+  text-align: right; /* Align the text to the right */
+  margin-left: auto; /* Push the text to the right */
+}
+
+.social-icon img {
+  width: 24px; /* Adjust icon size */
+  height: 24px;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between; /* Distribute items with space between */
+  align-items: center;
+}
 /*# sourceMappingURL=style.css.map */
+
+.col-sm-6.col-md-4 {
+  display: flex; /* Ensure the columns behave as flex items */
+  justify-content: center;
+  align-items: stretch; /* Stretch columns to match the tallest item */
+  margin-bottom: 30px; /* Space between rows */
+}
+
+/* MEDIA CSS */
+@media (max-width: 768px) {
+  .col-sm-6.col-md-4 {
+      flex: 1 0 50%; /* On small screens, 2 boxes per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .col-sm-6.col-md-4 {
+      flex: 1 0 100%; /* On very small screens, 1 box per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .service_section .row {
+      flex-direction: column;
+  }
+
+  .col-md-3, .col-md-9 {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
