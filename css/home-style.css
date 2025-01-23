@@ -67,11 +67,21 @@ button {
 .container.text-left .text {
     order: -1;
 }
-.description-title {
+.description-title a {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 2rem;
     margin: 0.5rem 0;
+    text-decoration: none
 }
 .lesson-title { 
-    text-align: right; 
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 2rem;
+    text-align: right;
+}
+.lesson-title a {  
+    text-decoration: none
 }
 img {
     width: 35rem;
