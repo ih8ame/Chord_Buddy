@@ -1,9 +1,17 @@
-body {
+html, body {
   font-family: 'Poppins', sans-serif;
   color: #0c0c0c;
+  background-repeat: no-repeat;
   background-color: #ffffff;
+  height: 100%;
+  margin: 0;
   overflow-x: hidden;
-  background: url('../images/background (2).jpg') no-repeat center center/cover;
+}
+
+main {
+  flex: 1; /* Allow the main content to grow and push the footer to the bottom */
+  flex-direction: column;
+  height: 100%;
 }
 
 .layout_padding {
@@ -30,13 +38,14 @@ body {
   padding-bottom: 90px;
 }
 
+/* NAVBAR */
 .navbar-brand .logo {
-  max-width: 120px;  /* Maximum width for the logo (adjust as needed) */
-  height: auto;      /* Maintain aspect ratio */
-  max-height: 80px;  /* Adjust the maximum height of the logo */
-  width: auto;       /* Allow width to scale proportionally */
-  object-fit: contain; /* Ensures the logo fits within its box without distortion */
-  margin-right: 10px; /* Optional: Adds space between logo and text */
+  max-width: 120px;
+  height: auto;
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 10px;
 }
 
 /* SIDEBAR */
@@ -80,17 +89,18 @@ body {
 
 .title-sidebar {
   font-size: 24px;
-  margin-bottom: 20px; /* Spacing below the title */
-  color: #000; /* Title text color */
-  background-color: #C8E9F7; /* Background color */
-  text-align: center; /* Center the text */
-  padding: 10px 15px; /* Add padding to increase the background area */
-  border-radius: 5px; /* Optional: Rounded corners for the background */
-  display: inline-block; /* Ensures the background resizes around the text */
-  width: 100%; /* Makes the background span the full width of the container */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+  margin-bottom: 20px;
+  color: #000;
+  background-color: #C8E9F7;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 100%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* HEADING CONTAINER */
 .heading_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,19 +150,32 @@ a:focus {
           box-shadow: none;
 }
 
-/*header section*/
+/*HERO section*/
 .hero_area {
   position: relative;
   height: calc(100vh - 35px);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-image: url(../images/hero-bg.jpg);
+  flex-direction: column;
+  background-image: url(../images/slider-1.jpg);
   background-size: cover;
+  background-position: center;
+}
+
+.hero_area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity here */
+  z-index: 1; /* Place it below the content but above the background */
+}
+
+/* Ensure content appears above the overlay */
+.hero_area * {
+  position: relative;
+  z-index: 2;
 }
 
 .sub_page .hero_area {
@@ -256,7 +279,7 @@ a:focus {
 }
 
 .header_section .header_bottom {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #87CEEB;
   padding: 15px 0;
 }
 
@@ -307,7 +330,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link {
-  color: #da7426;
+  color: #ffffff;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -405,8 +428,8 @@ a:focus {
   -webkit-transform: none;
           transform: none;
 }
-
 /*end header section*/
+
 /* slider section */
 .slider_section {
   -webkit-box-flex: 1;
@@ -443,6 +466,7 @@ a:focus {
 .slider_section #customCarousel1 {
   width: 100%;
   position: unset;
+  text-align: center;
 }
 
 .slider_section .detail-box {
@@ -495,17 +519,17 @@ a:focus {
 .slider_section .detail-box .btn-box .btn2 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #da7426;
-  color: #ffffff;
+  background-color: #87CEEB;
+  color: #0c0c0c;
   border-radius: 0;
   -webkit-transition: all .3s;
   transition: all .3s;
-  border: 1px solid #da7426;
+  border: 1px solid #87CEEB;
 }
 
 .slider_section .detail-box .btn-box .btn2:hover {
   background-color: transparent;
-  color: #da7426;
+  color: #ffffff;
 }
 
 .slider_section .img-box img {
@@ -548,6 +572,34 @@ a:focus {
   color: #ffffff;
 }
 
+.about_section {
+  position: relative;
+  height: calc(100vh - 35px);
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; /* Background behind content */
+}
+
+.about_section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(201, 198, 198, 0.2);
+  z-index: 0;
+}
+
+.about_section .content {
+  position: relative;
+  z-index: 2;
+}
+
 .about_section .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -556,19 +608,19 @@ a:focus {
 
 .about_section .img-box {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .about_section .img-box img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: relative;
   z-index: 2;
 }
@@ -873,6 +925,7 @@ a:focus {
 
 .contact_section .heading_container {
   margin-bottom: 45px;
+  margin-top: 45px;
 }
 
 .contact_section .row {
@@ -1202,13 +1255,15 @@ a:focus {
   font-size: 12px;
   margin: 0;
 }
-
 /* end info section */
-/* footer section*/
+
+/* Footer section */
 .footer_section {
-  position: relative;
+  position: sticky; /* Makes the footer visible during scrolling */
+  bottom: 0; /* Sticks the footer to the bottom of the viewport */
   background-color: #87CEEB;
   padding: 5px 50px;
+  width: 100%;
 }
 
 .footer_section p {
