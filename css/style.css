@@ -3,6 +3,7 @@ body {
   color: #0c0c0c;
   background-color: #ffffff;
   overflow-x: hidden;
+  background: url('../images/background (2).jpg') no-repeat center center/cover;
 }
 
 .layout_padding {
