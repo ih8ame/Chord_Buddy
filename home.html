@@ -3,20 +3,215 @@
 <head>
     <meta charset="utf-8">
     <title>Chord Buddy</title>
-    <link href="css/home-style.css" rel="stylesheet">
+    <style>
+        body {
+        font-family: 'Poppins', Arial, sans-serif;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: #ffffff;
+        color: #000000;
+        margin: 0;
+        }
+
+        /* Header section */
+        .hero_area {
+          position: relative;
+          height: calc(25vh - 35px);
+          display: flex;
+          flex-direction: column;
+          background-image: url(../images/hero-bg.jpg);
+          background-size: cover;
+        }
+
+        .sub_page .hero_area {
+          height: auto;
+        }
+
+        .sub_page .header_section .header_bottom {
+          background-color: #87CEEB;
+        }
+
+        .header_section .header_top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #87CEEB;
+            height: 100px;
+        }
+        .navbar-brand {
+            display: flex; 
+            align-items: center;
+            margin-left: 0;
+        }
+        .navbar-brand img {
+            width: 120px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .logo img {
+            width: 190px;
+            height: auto;
+        }
+        nav {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0; 
+        }
+        nav a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem 2rem;
+        }
+
+        .italic-font {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 3rem;
+        }
+
+        button {
+            padding: 1rem 2rem;
+            background-color: #87CEEB;
+            color: #000000;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 60px;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5rem;
+            border: none;
+        }
+
+        .lesson-container {
+            flex-direction: row-reverse;
+        }
+
+        .container.text-left .text {
+            order: -1;
+        }
+
+        .description-title a {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 2rem;
+            margin: 0.5rem 0;
+            text-decoration: none;
+        }
+
+        .lesson-title {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 2rem;
+            text-align: right;
+        }
+
+        .lesson-title a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 35rem;
+            height: 20rem;
+            object-fit: cover;
+            padding: 1rem;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 50px;
+        }
+
+        .description article {
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            border: none;
+        }
+
+        .text {
+            flex: 1;
+            text-align: left;
+        }
+
+        hr {
+            border: 2;
+            height: 2;
+            background: transparent;
+            margin: 0;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #87CEEB;
+            padding: 1rem 2rem;
+            align-items: center;
+        }
+
+        .social-media {
+            display: flex;
+            gap: 10rem;
+            align-items: center;
+        }
+
+        .social-media a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000000;
+            font-weight: lighter;
+        }
+
+        .social-media img {
+            width: 4rem;
+            height: 4rem;
+            margin-right: auto;
+            border: none;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Chord Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#lesson">Lesson</a></li>
-                <li><a href="#more">More</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="hero_area">
+        <header class="header_section">
+            <div class="header_top">
+                <div class="navbar-brand">
+                    <img src="images/logo.png" alt="Chord Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#lesson">Lesson</a></li>
+                        <li><a href="#more">More</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
     <main>
         <section class="hero">
             <h1 class="italic-font">Let's learn about music!</h1>
@@ -42,7 +237,9 @@
                     <img src="images/lesson.jpg" alt="Lesson" class="lesson"> 
                     <div class="text"> 
                         <h2 class="lesson-title"><a href="#lesson-section">Lesson</a></h2> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> </div> </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+                    </div> 
+                </div>
             </article>
             <hr style="width:80%"> 
             <article class="dictionary">
@@ -54,7 +251,6 @@
                     </div>
                 </div>
             </article>
-            <section class="hero"></section>
         </section>
     </main>                            
     <footer>
