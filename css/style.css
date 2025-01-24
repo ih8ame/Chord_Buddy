@@ -29,6 +29,67 @@ body {
   padding-bottom: 90px;
 }
 
+.navbar-brand .logo {
+  max-width: 120px;  /* Maximum width for the logo (adjust as needed) */
+  height: auto;      /* Maintain aspect ratio */
+  max-height: 80px;  /* Adjust the maximum height of the logo */
+  width: auto;       /* Allow width to scale proportionally */
+  object-fit: contain; /* Ensures the logo fits within its box without distortion */
+  margin-right: 10px; /* Optional: Adds space between logo and text */
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-color: #f8f9fa; /* Light background for the sidebar */
+  padding: 15px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sidebar hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.sidebar .nav {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar .nav li {
+  margin-bottom: 10px;
+}
+
+.sidebar .nav li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.sidebar .nav li a:hover {
+  color: #007bff; /* Highlight color on hover */
+}
+
+.title-sidebar {
+  font-size: 24px;
+  margin-bottom: 20px; /* Spacing below the title */
+  color: #000; /* Title text color */
+  background-color: #C8E9F7; /* Background color */
+  text-align: center; /* Center the text */
+  padding: 10px 15px; /* Add padding to increase the background area */
+  border-radius: 5px; /* Optional: Rounded corners for the background */
+  display: inline-block; /* Ensures the background resizes around the text */
+  width: 100%; /* Makes the background span the full width of the container */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+
 .heading_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -684,8 +745,23 @@ a:focus {
   position: relative;
 }
 
+.service_section .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service_section .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service_section .heading_center {
+  margin-bottom: 30px;
+}
+
 .service_section .box {
   margin-top: 30px;
+  margin-bottom: 30px;
   text-align: center;
   -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
@@ -695,6 +771,8 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -704,42 +782,56 @@ a:focus {
           align-items: center;
 }
 
-.service_section .box .img-box {
-  width: 65px;
-  height: 65px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.service_section .box {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.service_section .box .img-box img {
-  max-height: 100%;
-  max-width: 100%;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-.service_section .box .detail-box {
-  margin-top: 15px;
-}
-
-.service_section .box .detail-box h5 {
-  font-weight: bold;
-}
-
-.service_section .box .detail-box p {
-  margin: 0;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .service_section .box:hover {
   background-color: #C8E9F7;
-  color: #000000;
+  color: #000;
+  transform: translateY(-5px);
+}
+
+.service_section .box .img-box {
+  width: 100%;
+  height: 200px; /* Adjust as needed for the banner size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.service_section .box .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.service_section .box:hover .img-box img {
+  transform: scale(1.05);
+}
+
+.service_section .box .detail-box {
+  text-align: center;
+}
+
+.service_section .box .detail-box h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service_section .box .detail-box p {
+  margin: 0;
 }
 
 .service_section .box:hover .img-box img {
@@ -1114,7 +1206,7 @@ a:focus {
 .footer_section {
   position: relative;
   background-color: #87CEEB;
-  text-align: center;
+  padding: 5px 50px;
 }
 
 .footer_section p {
@@ -1126,4 +1218,56 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+.footer-left {
+  display: flex;
+  gap: 15px; /* Space between social media icons */
+}
+
+.footer-right {
+  text-align: right; /* Align the text to the right */
+  margin-left: auto; /* Push the text to the right */
+}
+
+.social-icon img {
+  width: 24px; /* Adjust icon size */
+  height: 24px;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between; /* Distribute items with space between */
+  align-items: center;
+}
 /*# sourceMappingURL=style.css.map */
+
+.col-sm-6.col-md-4 {
+  display: flex; /* Ensure the columns behave as flex items */
+  justify-content: center;
+  align-items: stretch; /* Stretch columns to match the tallest item */
+  margin-bottom: 30px; /* Space between rows */
+}
+
+/* MEDIA CSS */
+@media (max-width: 768px) {
+  .col-sm-6.col-md-4 {
+      flex: 1 0 50%; /* On small screens, 2 boxes per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .col-sm-6.col-md-4 {
+      flex: 1 0 100%; /* On very small screens, 1 box per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .service_section .row {
+      flex-direction: column;
+  }
+
+  .col-md-3, .col-md-9 {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
