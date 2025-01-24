@@ -1,31 +1,4 @@
-/* General Styling */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: black;
-  }
-  
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #87CEEB;
-    padding: 10px 20px;
-  }
-  
-  header .logo {
-    height: 70px;
-  }
-  
-  header nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: black;
-    font-weight: normal;
-  }
-  
-  /* Main Content */
+/* Main Content */
   .content {
     background: url('../images/background (2).jpg') no-repeat center center/cover;
     opacity: 0.85;
@@ -64,22 +37,4 @@ body {
   
   .box.contact {
     width: 640px;
-  }
-  
-  /* Footer */
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #87CEEB;
-    padding: 10px 20px;
-  }
-  
-  footer .social img {
-    height: 30px;
-    margin-right: 10px;
-  }
-  
-  footer .contact-info {
-    text-align: right;
   }

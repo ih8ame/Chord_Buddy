@@ -808,6 +808,7 @@ a:focus {
   align-items: center;
   overflow: hidden;
   margin-bottom: 15px;
+  gap: 10px
 }
 
 .service_section .box .img-box img {
